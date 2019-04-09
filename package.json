@@ -1,0 +1,28 @@
+{
+  "name": "todo",
+  "version": "1.0.0",
+  "description": "small api using express & mongodb",
+  "main": "index.js",
+  "scripts": {
+    "dev server": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/W2AlharbiMe/todo.git"
+  },
+  "keywords": [],
+  "author": "Abdullah Alharbi",
+  "license": "ISC",
+  "dependencies": {
+    "morgan": "^1.9.1",
+    "express": "^4.16.4",
+    "body-parser": "^1.18.3",
+    "mongodb": "^3.2.3",
+    "mongoose": "^5.5.0",
+    "helmet": "^3.16.0"
+  },
+  "bugs": {
+    "url": "https://github.com/W2AlharbiMe/todo/issues"
+  },
+  "homepage": "https://github.com/W2AlharbiMe/todo#readme"
+}
