@@ -63,3 +63,7 @@ typings/
 
 # configure application
 config.json
+
+# vs code settings
+.vscode/*
+
