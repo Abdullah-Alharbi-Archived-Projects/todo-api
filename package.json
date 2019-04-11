@@ -4,7 +4,7 @@
   "description": "small api using express & mongodb",
   "main": "index.js",
   "scripts": {
-    "dev server": "nodemon server.js"
+    "dev-serve": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -24,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/W2AlharbiMe/todo/issues"
   },
-  "homepage": "https://github.com/W2AlharbiMe/todo#readme"
+  "homepage": "https://github.com/W2AlharbiMe/todo#readme",
+  "devDependencies": {
+    "eslint": "^5.16.0"
+  }
 }
