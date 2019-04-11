@@ -2,7 +2,7 @@
   "name": "todo",
   "version": "1.0.0",
   "description": "small api using express & mongodb",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "dev-serve": "nodemon server.js"
   },
@@ -26,6 +26,8 @@
   },
   "homepage": "https://github.com/W2AlharbiMe/todo#readme",
   "devDependencies": {
-    "eslint": "^5.16.0"
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0"
   }
 }
