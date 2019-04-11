@@ -6,7 +6,7 @@ const router = new Router();
 const mainController = require('./controllers/mainController');
 
 // all the routes goes here
-router.get('/', mainController.main);
+router.get('/', mainController.index);
 
 
 module.exports = router;
