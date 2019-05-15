@@ -36,7 +36,14 @@ router
    * @desc   update todo
    * @access Public
    */
-  .patch('/todo/:id', todoController.update);
+  .patch('/todo/:id', todoController.update)
+
+  /**
+   * @route  DELETE /api/todo/:id
+   * @desc   delete todo
+   * @access Public
+   */
+  .delete('/todo/:id', todoController.remove);
 
 
 module.exports = router;
