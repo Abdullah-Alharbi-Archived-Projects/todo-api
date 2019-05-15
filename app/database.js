@@ -1,3 +1,7 @@
+/**
+ * this file will be responsible for connecting to the database
+ * and export the connection to be used across the project
+ */
 const mongoose = require('mongoose');
 const { mongoURI } = require('../config.json'); // this is the mongodb string
 
