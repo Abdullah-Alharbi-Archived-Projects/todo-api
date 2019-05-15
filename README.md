@@ -6,11 +6,15 @@
 - Mongodb: Database(`NO-SQL Database`)
 - Helmet: Secure Headers
 - Body-parser: parse the body object
+- Morgan: simple logger
 
 ## Features:
 - [x] **Simple Endpoints names**
 - [x] **MVC - Model View Controller**
+- [x] **CRUD - Create, Read, Update, Delete using http verbs**
+- [x] **Great Structure**
 
 
 ## Up-Coming:
-- [-] Create Todo Schema
+- [-] Authentication
+- [-] Authorization
