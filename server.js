@@ -2,7 +2,7 @@
  * this file basically is the entry point of
  * the app and it's create http server
  * and load the middlewares some middlewares
- * will be executed between the request and the response
+ * will be execute between the request and the response
  * after that will load the routes
  * lastly create the http server
  */
