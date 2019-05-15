@@ -7,6 +7,8 @@
  * lastly create the http server
  */
 const express = require('express');
+// eslint-disable-next-line no-unused-vars
+const database = require('./app/database');
 const { port, host } = require('./config.json');
 
 const app = express();
