@@ -66,4 +66,4 @@ config.json
 
 # vs code settings
 .vscode/*
-
+.vscode
