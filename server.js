@@ -13,6 +13,6 @@ const app = express();
 
 app.use(require('./app/middlewares'));
 
-app.use(require('./app/routes'));
+app.use('/api/', require('./app/routes'));
 
 app.listen(port, host, () => console.log(`Listening to http://${host}:${port}`));
