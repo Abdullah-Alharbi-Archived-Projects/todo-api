@@ -19,4 +19,15 @@ module.exports = {
       .then(todo => res.status(201).json({ message: 'saved!', ...destructTodo(todo) }))
       .catch(err => console.log(err));
   },
+  update(req, res) {
+    TodoModel
+      .findById(req.params.id)
+      .then((todo) => {
+        todo.name = req.body.name;
+        todo.completed = req.body.completed ? req.body.completed : todo.completed;
+        return todo.save();
+      })
+      .then(todo => res.status(200).json({ message: 'saved!', ...destructTodo(todo) }))
+      .catch(err => console.log(err));
+  },
 };
