@@ -30,4 +30,10 @@ module.exports = {
       .then(todo => res.status(200).json({ message: 'saved!', ...destructTodo(todo) }))
       .catch(err => console.log(err));
   },
+  remove(req, res) {
+    TodoModel
+      .findByIdAndDelete(req.params.id)
+      .then(() => res.status(200).json({ message: 'deleted!' }))
+      .catch(err => console.log(err));
+  },
 };
