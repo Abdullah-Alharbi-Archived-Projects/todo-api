@@ -29,7 +29,14 @@ router
    * @desc   create new todo
    * @access Public
    */
-  .post('/todo/', todoController.store);
+  .post('/todo/', todoController.store)
+
+  /**
+   * @route  PATCH /api/todo/:id
+   * @desc   update todo
+   * @access Public
+   */
+  .patch('/todo/:id', todoController.update);
 
 
 module.exports = router;
