@@ -23,7 +23,7 @@ module.exports = {
     TodoModel
       .findById(req.params.id)
       .then((todo) => {
-        todo.name = req.body.name;
+        todo.name = req.body.name ? req.body.name : todo.name;
         todo.completed = req.body.completed ? req.body.completed : todo.completed;
         return todo.save();
       })
