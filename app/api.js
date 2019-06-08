@@ -23,6 +23,12 @@ router
    * @access Public
    */
   .get('/todos/', todoController.index)
+  /**
+   * @route  GET /api/todos/:id
+   * @desc   get todos
+   * @access Public
+   */
+  .get('/todos/:id', todoController.get)
 
   /**
    * @route  POST /api/todos/
