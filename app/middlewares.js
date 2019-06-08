@@ -8,10 +8,10 @@ const router = new Router();
 
 // use any middleware here
 router
-	.use(morgan('dev'))
-	.use(helmet())
-	.use(bodyParser.json())
-	.use(bodyParser.urlencoded({ extended: false }));
+  .use(morgan('dev'))
+  .use(helmet())
+  .use(bodyParser.json())
+  .use(bodyParser.urlencoded({ extended: false }));
 
 
 module.exports = router;
