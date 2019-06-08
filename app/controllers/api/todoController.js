@@ -1,6 +1,7 @@
 const { Todo, validate } = require('../../models/Todo');
 const { destructTodo } = require('../../helpers/object');
 
+
 module.exports = {
   async index(req, res) {
     const todos = await Todo
@@ -10,7 +11,10 @@ module.exports = {
     res.status(200).json(todos);
   },
   async get(req, res) {
-    res.status(200).json({ todo: {} });
+    const todo = await Todo.findById(req.params.id);
+    if (!todo) return res.status(404).json({ message: 'NOT FOUND' });
+
+    res.status(200).json(todo);
   },
   async store(req, res) {
     const newTodo = new Todo({
