@@ -11,8 +11,9 @@
 - [x] **CRUD - Create, Read, Update, Delete using http verbs**
 - [x] **Great Structure**
 
+## In progress:
+- [-] Validation ...
 
 ## Up-Coming:
-- [-] Validation
 - [-] Authentication
 - [-] Authorization
