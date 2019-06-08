@@ -10,10 +10,10 @@
 - [x] **MVC - Model View Controller**
 - [x] **CRUD - Create, Read, Update, Delete using http verbs**
 - [x] **Great Structure**
+- [ء] Validation
 
 ## In progress:
-- [-] Validation ...
+- [-] Authentication
 
 ## Up-Coming:
-- [-] Authentication
 - [-] Authorization
