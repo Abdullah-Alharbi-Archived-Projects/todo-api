@@ -1,4 +1,5 @@
 const { Schema, model } = require('mongoose');
+const Joi = require('@hapi/joi');
 
 const todoSchema = new Schema({
   name: {
@@ -16,4 +17,16 @@ const todoSchema = new Schema({
 }, { versionKey: false });
 
 
-module.exports = model('todo', todoSchema);
+function validateTodo(todo) {
+  const schema = {
+    name: Joi.string().required(),
+    completed: Joi.Boolean(),
+  };
+
+  return Joi.validate(todo, schema);
+}
+
+const Todo = model('Todo', todoSchema);
+
+module.exports.Todo = Todo;
+module.exports.validate = validateTodo;
