@@ -17,6 +17,9 @@ module.exports = {
     res.status(200).json(todo);
   },
   async store(req, res) {
+    const { error } = validate(req.body);
+    if (error) return res.status(400).send(error.details[0].message);
+
     const newTodo = new Todo({
       name: req.body.name,
     });
@@ -25,7 +28,11 @@ module.exports = {
     res.status(201).json({ message: 'saved!', ...destructTodo(todo) })
   },
   async update(req, res) {
+    const { error } = validate(req.body);
+    if (error) return res.status(400).send(error.details[0].message);
+
     let todo = await Todo.findById(req.params.id)
+    if (!todo) return res.status(404).json({ message: 'NOT FOUND' });
 
     const { name, completed } = req.body;
 
@@ -37,7 +44,9 @@ module.exports = {
     res.status(200).json({ message: 'saved!', ...destructTodo(todo) })
   },
   async remove(req, res) {
-    const result = await Todo.findByIdAndDelete(req.params.id);
+    const result = await Todo.findByIdAndRemove(req.params.id);
+    if (!result) res.status(404).json({ message: 'This todo is already deleted!' });
+
     res.status(200).json({ message: 'deleted!', ...destructTodo(result) });
   },
 };
