@@ -18,32 +18,32 @@ router
 // todo routes here
 router
   /**
-   * @route  GET /api/todo/
+   * @route  GET /api/todos/
    * @desc   get all the todos
    * @access Public
    */
-  .get('/todo/', todoController.index)
+  .get('/todos/', todoController.index)
 
   /**
-   * @route  POST /api/todo/
+   * @route  POST /api/todos/
    * @desc   create new todo
    * @access Public
    */
-  .post('/todo/', todoController.store)
+  .post('/todos/', todoController.store)
 
   /**
-   * @route  PATCH /api/todo/:id
+   * @route  PUT /api/todos/:id
    * @desc   update todo
    * @access Public
    */
-  .patch('/todo/:id', todoController.update)
+  .put('/todos/:id', todoController.update)
 
   /**
-   * @route  DELETE /api/todo/:id
+   * @route  DELETE /api/todos/:id
    * @desc   delete todo
    * @access Public
    */
-  .delete('/todo/:id', todoController.remove);
+  .delete('/todos/:id', todoController.remove);
 
 
 module.exports = router;
