@@ -34,6 +34,6 @@ module.exports = {
   },
   async remove(req, res) {
     const result = await Todo.findByIdAndDelete(req.params.id);
-    res.status(200).json({ message: 'deleted!' });
+    res.status(200).json({ message: 'deleted!', ...destructTodo(result) });
   },
 };
