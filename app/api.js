@@ -1,10 +1,9 @@
 const { Router } = require('express');
-
-const router = new Router();
-
+const validateObjectId = require('./middleware/validateObjectId');
 const mainController = require('./controllers/api/mainController');
 const todoController = require('./controllers/api/todoController');
 
+const router = new Router();
 
 router
   /**
@@ -28,7 +27,7 @@ router
    * @desc   get todos
    * @access Public
    */
-  .get('/todos/:id', todoController.get)
+  .get('/todos/:id', validateObjectId, todoController.get)
 
   /**
    * @route  POST /api/todos/
@@ -42,14 +41,14 @@ router
    * @desc   update todo
    * @access Public
    */
-  .put('/todos/:id', todoController.update)
+  .put('/todos/:id', validateObjectId, todoController.update)
 
   /**
    * @route  DELETE /api/todos/:id
    * @desc   delete todo
    * @access Public
    */
-  .delete('/todos/:id', todoController.remove);
+  .delete('/todos/:id', validateObjectId, todoController.remove);
 
 
 module.exports = router;
