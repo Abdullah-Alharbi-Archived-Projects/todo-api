@@ -9,7 +9,7 @@
 const express = require('express');
 // eslint-disable-next-line no-unused-vars
 const database = require('./app/database');
-const { port, host } = require('./config.json');
+const { port } = require('./config.json');
 
 const app = express();
 
@@ -19,4 +19,4 @@ app.use(require('./app/routes'));
 
 app.use('/api/', require('./app/api'));
 
-app.listen(port, host, () => console.log(`Listening to http://${host}:${port}`));
+app.listen(port, () => console.log(`Listening to http://localhost:${port}`));
