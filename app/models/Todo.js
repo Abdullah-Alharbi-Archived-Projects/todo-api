@@ -20,7 +20,7 @@ const todoSchema = new Schema({
 function validateTodo(todo) {
   const schema = {
     name: Joi.string().required(),
-    completed: Joi.Boolean(),
+    completed: Joi.boolean(),
   };
 
   return Joi.validate(todo, schema);
